@@ -1,0 +1,67 @@
+<html>
+    <meta charset="UTF-8">
+    <h1>05-05 Práctica número secreto con arrays</h1> <! 05-05 número secreto arrays>
+    <h3>----------------------------------------------------------------</h3>
+    <br>
+    <br>
+    <br>
+    Captura un número entre el 0 y el 10. Luego haz click en el botón "Confirmar número secreto".
+    <br>
+    <br>
+    <input/>
+    <button>Confirmar número secreto</button>
+
+    <script>       
+        var secretos = [3,5,8,10];
+        var lista = secretos.length;
+        var input = document.querySelector("input");
+        input.focus();
+
+
+        document.write("<br> Secretos: " + secretos);
+        document.write("<br> arrays: " + lista);
+
+        function verificar() {
+            var encontrado = false;
+
+            for(var posicion = 0; posicion < lista; posicion++){
+
+               if (parseInt(input.value) == secretos[posicion]) {
+
+                    alert("Número correcto!");
+                    document.write("<br> <h1>¡Felicidades! </h1>");
+                    encontrado = true;
+                    break;
+                }
+                //else {
+
+                  //  alert("Número incorrecto!");
+                //}
+            }
+
+            if(encontrado == false) {
+
+                alert("Error!")
+            }
+
+            input.value = "";
+            input.focus(); 
+        }
+            
+        var button = document.querySelector("button");
+        button.onclick = verificar;
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <h4>Práctica por Raúl Trueba Mejía - G4 2022 CDMX</h4>
+        <a href="https://www.linkedin.com/in/deepfx/"><img src="linkedin.png" alt="Contacto Raúl Trueba"></a>
+        <a><img src="one.png" alt="Contacto Raúl Trueba" width="36" height="36"></a>
+        <a><img src="logoalura.svg" alt="Contacto Raúl Trueba" width="32" height="32"></a>       
+    </div>
+</html>
